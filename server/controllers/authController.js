@@ -1,6 +1,6 @@
 const userModel = require("../models/userModel");
-const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
+const bcrypt = require("bcryptjs");//password en and decryption
+const jwt = require("jsonwebtoken"); //user id and jwt_secret mix and produce token
 
 const registerController = async (req, res) => {
   try {
@@ -12,7 +12,7 @@ const registerController = async (req, res) => {
         message: "User ALready exists",
       });
     }
-    //hash password
+    //hash password //encrypting password
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(req.body.password, salt);
     req.body.password = hashedPassword;
@@ -62,6 +62,7 @@ const loginController = async (req, res) => {
         message: "Invalid Credentials",
       });
     }
+    //user id and jwt_secret mix and produce token
     const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, {
       expiresIn: "1d",
     });

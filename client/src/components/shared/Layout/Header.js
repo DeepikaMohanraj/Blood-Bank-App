@@ -1,7 +1,7 @@
 import React from "react";
 import { BiDonateBlood, BiUserCircle } from "react-icons/bi";
 import { useNavigate, useLocation, Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";//useSelector is used to access the Redux store's state.
 const Header = () => {
   const { user } = useSelector((state) => state.auth);
   const navigate = useNavigate();

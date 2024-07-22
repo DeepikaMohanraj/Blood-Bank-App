@@ -1,6 +1,6 @@
 import React from "react";
 
-const InputType = ({
+const InputType = ({//props
   labelText,
   labelFor,
   inputType,
@@ -27,3 +27,5 @@ const InputType = ({
 };
 
 export default InputType;
+//InputType component is a reusable form input component in React. 
+//It accepts several props to customize the label and input field, making it flexible for various use cases.

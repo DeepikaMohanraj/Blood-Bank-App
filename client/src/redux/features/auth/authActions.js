@@ -1,4 +1,4 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
+import { createAsyncThunk } from "@reduxjs/toolkit";//createAsyncThunk is a utility from Redux Toolkit that allows you to create asynchronous actions in a Redux application.
 import API from "../../../services/API";
 import { toast } from "react-toastify";
 

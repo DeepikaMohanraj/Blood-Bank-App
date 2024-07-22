@@ -23,3 +23,10 @@ module.exports = async (req, res, next) => {
     });
   }
 };
+// vara request la authorization header iruka nu pakum
+//The middleware function extracts the JWT from the Authorization header.
+//It verifies the token using the secret key.
+//If verification fails, it responds with a 401 status and an error message.
+//If verification succeeds, it attaches the user ID from the token payload to the request body.
+//Any other errors during the process result in a 401 response and an error message.
+//This middleware ensures that only authenticated users can proceed to the subsequent middleware or route handlers.
