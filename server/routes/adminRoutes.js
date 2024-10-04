@@ -13,9 +13,9 @@ const router = express.Router();
 
 //Routes
 
-//GET || DONAR LIST
+//method:GET || DONAR LIST
 router.get(
-  "/donar-list",
+  "/donar-list",//URL
   authMiddelware,
   adminMiddleware,
   getDonarsListController
