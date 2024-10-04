@@ -71,3 +71,7 @@ const bloodGroupDetailsContoller = async (req, res) => {
 };
 
 module.exports = { bloodGroupDetailsContoller };
+
+//to fetch blood group data by calculating the total blood quantity
+//"in" and "out" for an organization and then computes the available
+//blood for each blood group.
